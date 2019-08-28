@@ -1,0 +1,17 @@
+{% extends "dogs_project/base.html" %}
+
+{% block content %}
+	
+	<p> dog name </p>
+
+	<ul>
+		{% for dogname in dognames %}
+			<li>{{dogname}}</li>
+		{% empty %}
+			<li>No dog names have been added yet</li>
+		{% endfor %}
+	</ul>
+
+	<a href="{% url 'dogs_project:new_dogname' %}">Add a new dog name:</a>
+
+{% endblock content %}

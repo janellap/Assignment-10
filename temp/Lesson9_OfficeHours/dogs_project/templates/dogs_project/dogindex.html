@@ -1,0 +1,25 @@
+<p><h1>Dogs</h1></p>
+
+<p><h2> Amy Jones </h2></p>
+
+<table style = "width:60%" border=1>
+	<tr>
+		<th> Dog Name</th>
+		<th> Dog Breed</th>
+		<th> Dog Age</th>
+	</tr>
+
+	{% for dog in dogs %}
+		{% if dog.dogownerid == 1 %}
+
+		<tr>
+			<td>{{dog.dogname}} </td>
+			<td>{{dog.dogname}} </td>
+			<td>{{dog.dogname}} </td>
+		</tr>
+
+		{% endif %}
+	{% empty %}
+	<p>No dogs found </p>
+	{% endfor %}
+</table>

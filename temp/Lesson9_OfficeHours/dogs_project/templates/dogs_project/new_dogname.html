@@ -1,0 +1,13 @@
+{% extends "dogs_project/index.hmtl"}
+
+{% block conent %}
+	<p> Add another dog name: </p>
+
+	<form action ="{% url 'dogs_project:new_dogname' %}" method='post'>
+		{% csrf_token %}
+		{{ form.as_p}}
+		<button name ="submit">add dogname </button>
+	</form>
+
+{% endblock conent %}
+
